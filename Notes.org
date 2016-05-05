@@ -93,6 +93,6 @@
 *** GIT
            * git clone时遇见error setting certificate verify locations错误时，可以尝试
 	     用 git config --global http.sslVerify false 来解决
+           * git push 方法 详情见http://my.oschina.net/u/1050949/blog/194536
 
-
-
+	     
