@@ -1,0 +1,98 @@
+#+TITLE:NOTES
+#+AUTHOR:谢劲  https://github.com/eric8180/Notes.git
+
+
+* eric's note
+** plan
+*** time management
+
+   * time mangagement
+    |            | 工作时间   | 运动时间 |
+    |------------+------------+----------|
+    | 工作日     | 8-10 hours | 0.5 hour |
+    | 周末       | 4-6 hours  | 0.5 hour |
+    | 法定节假日 | 随意       | 随意     |
+    | 求职日     | 6-8 hours  | 0.5 hour |
+
+
+   * checkout
+    | 日期       | 考核 |
+    | 2015/5/4   | B+  |
+    | 2016/5/5  |     |
+
+   
+*** reading
+    
+    | 书名称 | 阅读计划 |
+    |       | 
+
+** reserve
+*** concept
+            *  EPOC (excess post - exercise oxygen consumption)
+                运动后过量氧耗:运动后恢复期内为了偿还运动中的氧亏,以及在运动后使处于高水平代
+                谢的机体恢复到安静水平时消耗的氧量,称为运动后过量氧耗。
+            *   UEFI,全称Unified Extensible Firmware Interface,即“统一的可扩展固件接口”,是一种详
+                 细描述全新类型接口的标准,是适用于电脑的标准固件接口,旨在代替BIOS(基本输入/输出系
+                 统)。此标准由UEFI联盟中的140多个技术公司共同创建,其中包括微软公司。UEFI旨在提高软
+                 件互操作性和解决BIOS的局限性。
+*** linux
+            * Linux文件系统以及目录结构简介
+                 http://blog.chinaunix.net/uid-9525959-id-2001812.html
+                 其中Linux与Windows文件系统不同的是,Linux没有硬盘之分全是文件,但是每个文件里装的东西
+                 有个大概的分类。比如/boot里面放的就是引导。
+            * 设置新的环境变量:env指令是显示当前用户的环境变量。
+                 gedit /etc/profile
+                 增加 DEBIAN _ BACKUP="/media/学习" （变量）
+                 终端输入 source /etc/profile  （使变量即可生效）
+                 echo $DEBIAN _ BACKUP 是否设置正确
+                 重启后永久生效
+            *  fat文件系统采取链表的方式存放文件数据,读取所有数据需要依次遍历所有节点,因此当文件过散的
+                 时候我们读取该文件的所有数据需要硬盘转好几圈,因此windows会经常需要磁盘碎片整理。ext文件
+                 系统则不需要ext文件系统中,有inode 和block。其中每个文件(档案和目录)对应唯一一个inode,这个inode中保存
+                 了文件所有的block。(block负责存放文件具体的数据)。不同的是对于档案block保存的是档案数
+                 据,对于目录block保存的则是相应档案或子目录的inode
+            * 退出vi的方法:esc + : + q!+enter
+            * gnome-open /etc #shell指令打开图形界面的/etc
+            * 在正则表达式中 ’^ g’ 与‘[^ g]’ 其中的 ^具有不同的含义。单引号中的^ 表示行头,[]中的^ 表示取反
+                 关于linux 用户和群组,在当前用户指令下输入groups可以知道当前用户加入了哪些组,当用户想加入特定的组是可以通过两种方式:
+                 第一:指令 gpasswd -a userid groupid(推荐第一种,因为有的时候文本显示的东西在更改
+                 后不会实际产生作用,特殊情况除外所以统一用指令来更改万无一失)
+                 第二:在/etc/group 文件相应的group最后一列加入用户id 再保存
+                 groups指令可能显示可能会出现错误,在加入或删除组名时没有及时更新
+                 通过newgrp groupsid 可以更改当前用户的有效群组 /etc/passwd 文件存放了用户id的相关信息
+                 /etc/group 文件存放了groupid 的相关信息
+            * 非root用户想使用sudo 必须在 /etc/sudoers 加入"用户id ALL=(ALL:ALL) ALL"语句 其中ALL可
+                 以设置为某一条命令(绝对路径)这样就可以限制该用户利用sudo使用什么指令
+                 linux中可以通过终端给不同的用户发消息,利用指令who 得到目前在线的用户和端口号,通过 指
+                 令 write userid userport就可以开始给别的用户发送消息 ctrl+D结束消息输入
+            * 总的来说,CPU从内存中一条一条地取出指令和相应的数据,按指令操作码的规定,对数据进行运算处理,直到程序执行完毕为止。CPU的运行原理就是:控制单元在时序脉冲的作用下,将指令计数器里所
+                 指向的指令地址(这个地址是在内存里的)送到地址总线上去,然后CPU将这个地址里的指令读到指令寄存器进行译码。对于执行指令过程中所需要
+                 用到的数据,会将数据地址也送到地址总线,然后CPU把数据读到CPU的内部存储单元(就是内部寄存器)暂存起来,最后命令运算单元对数据进行处
+                 理加工。周而复始,一直这样执行下去,天荒地老,海枯枝烂,直到停电。来自 <http://blog.chinaunix.net/uid-23069658-id-3563960.html>
+*** emacs
+**** org-mode
+           * org-mode打开的时候只显示一级标题后面有.. 表示有内容。按 *TAB* 键可以打开或者关闭目录。按 *shift+tab* 打开全部目录
+           * 将org文件导出为其他文件的方法：C-c C-e接着按选项选择
+           * 列举内容时，假如要加序号，则序号一定要对齐并且列表后面要加 *空格* 不然无法正常显示出来。
+           * 当文本内容中想输入“_ ”（下标） " ^ "（上标） 等表示字体的符号时，记得加空格
+           * alt + ret 插入一个同级标题
+           * 文档元数据包括TITLE，AUTHOR等。使用时用 #+TITLE： 注意：要紧跟title变颜色后才成功。更多元数据见网址 http://www.360doc.com/content/14/1219/13/20545288_434126794.shtml
+           *
+**** other
+           * melt+>可以移动到文本末尾 melt+<可以移动到文本开头
+               ctrl+a可以移动到本行开头 ctrl+e可以移动到本行末尾
+
+*** python
+*** windows
+*** SQL
+           * 关系数据库包括并，差，交，笛卡尔积，投影，除以及 *连接* 关系。在连接关系中通过主表的主键
+             与从表的外键建立连接。（外键必须是从表的主键或者唯一值）
+           * 建立E-R模型时注意优化表格达到第三范式,主键确定则其它列的值也确定了我们称之为第二范式，第三范式则是消除了传递性依赖的第二范式
+           * SQL基本操作包括：
+
+*** GIT
+           * git clone时遇见error setting certificate verify locations错误时，可以尝试
+	     用 git config --global http.sslVerify false 来解决
+
+
+
