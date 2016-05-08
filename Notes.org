@@ -18,8 +18,10 @@
    * checkout
     | 日期       | 考核 |
     | 2015/5/4   | B+  |
-    | 2016/5/5  |     |
-
+    | 2016/5/5  |  C  |
+    | 2016/5/6 |   D|
+    | 2016/5/7 | D|
+    | 2016/5/8 | D|
    
 *** reading
     
@@ -40,7 +42,7 @@
                  http://blog.chinaunix.net/uid-9525959-id-2001812.html
                  其中Linux与Windows文件系统不同的是,Linux没有硬盘之分全是文件,但是每个文件里装的东西
                  有个大概的分类。比如/boot里面放的就是引导。
-            * 设置新的环境变量:env指令是显示当前用户的环境变量。
+aq1            * 设置新的环境变量:env指令是显示当前用户的环境变量。
                  gedit /etc/profile
                  增加 DEBIAN _ BACKUP="/media/学习" （变量）
                  终端输入 source /etc/profile  （使变量即可生效）
@@ -62,7 +64,7 @@
                  通过newgrp groupsid 可以更改当前用户的有效群组 /etc/passwd 文件存放了用户id的相关信息
                  /etc/group 文件存放了groupid 的相关信息
             * 非root用户想使用sudo 必须在 /etc/sudoers 加入"用户id ALL=(ALL:ALL) ALL"语句 其中ALL可
-                 以设置为某一条命令(绝对路径)这样就可以限制该用户利用sudo使用什么指令
+                   以设置为某一条命令(绝对路径)这样就可以限制该用户利用sudo使用什么指令
                  linux中可以通过终端给不同的用户发消息,利用指令who 得到目前在线的用户和端口号,通过 指
                  令 write userid userport就可以开始给别的用户发送消息 ctrl+D结束消息输入
             * 总的来说,CPU从内存中一条一条地取出指令和相应的数据,按指令操作码的规定,对数据进行运算处理,直到程序执行完毕为止。CPU的运行原理就是:控制单元在时序脉冲的作用下,将指令计数器里所
@@ -81,6 +83,7 @@
 **** other
            * melt+>可以移动到文本末尾 melt+<可以移动到文本开头
                ctrl+a可以移动到本行开头 ctrl+e可以移动到本行末尾
+           * C-x C-q 可以将缓冲区切换为只读缓冲区或者取消
 
 *** python
 *** windows
@@ -88,11 +91,14 @@
            * 关系数据库包括并，差，交，笛卡尔积，投影，除以及 *连接* 关系。在连接关系中通过主表的主键
              与从表的外键建立连接。（外键必须是从表的主键或者唯一值）
            * 建立E-R模型时注意优化表格达到第三范式,主键确定则其它列的值也确定了我们称之为第二范式，第三范式则是消除了传递性依赖的第二范式
-           * SQL基本操作包括：
+           * 分组计算：计算函数和GROUP BY 命令组合，当分组需要加判定条件时使用HAVING而不是WHERE
+           * 
 
 *** GIT
            * git clone时遇见error setting certificate verify locations错误时，可以尝试
 	     用 git config --global http.sslVerify false 来解决
+           * git三部曲 git add（添加文件到缓冲区）->git commit（缓冲区文件到本地库）->
+	     git push(上传改动到服务器）。其中可以通过git status查看状态
            * git push 方法 详情见http://my.oschina.net/u/1050949/blog/194536
 
 	     
