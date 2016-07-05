@@ -212,12 +212,14 @@
     * 重载和const http://blog.sina.com.cn/s/blog_64053138010171rt.html
       重载的判断条件不包括返回值类型
 
-** other
-         * iphone icloud 连接不了服务器解决方案：http://jingyan.baidu.com/article/f0e83a25a58dad22e59101dd.html
-                                       管理员身份运行CMD(右键选择）-》netsh winsock reset-》重启电脑
+** 项目管理
+*** 客户活动管理与资源开发
+**** concept
+     * 软件项目开发一般有几个重要的结构：DAL（数据访问层），BLL（业务逻辑层）和USL（表示层）
+     * EFModel是Entity Framework中的一个类库项目，用于生成数据模型
+     * visual studio各图标含义 https://msdn.microsoft.com/zh-cn/library/y47ychfe.aspx
 
-         * 赫卡忒(te)夜之女神
-          
+	   
 * Todo with days
 ** DONE 完成《爱的觉醒》阅读
    CLOSED: [2016-05-31 Tue 23:56] DEADLINE: <2016-05-31 Tue>
