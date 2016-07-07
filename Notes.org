@@ -191,9 +191,19 @@
 **** ASP.NET MVC框架
           * 学习网址 http://www.cnblogs.com/powertoolsteam/p/MVC_one.html
 
-	  * MVC （model view controller）
+	  * MVC （model view *controller* ）
 
-	  * 
+	  * controller作为MVC的核心，它负责接收用户发出的HTML的请求，并作出相应的响应
+	    每个URL“ /”后的字段都是个函数名（第一个为controller的类名）
+
+	  * 通常情况下 controller的函数中返回view就可以正确显示页面，但这只能显示静态
+	    页面，要想显示动态页面必须在环节中融入model。三者的合理调用关系controller
+	    使用model提供的模板（通常是类）将数据保存到viewdata,接着controller调用view
+	    来显示HTML。
+
+	  * 其实可以将model的定义（类定义）直接放在controller中，但是为了能够使代码结构
+	    清晰，所以使用了MVC层次
+	    
 **** 其它
           * C# , .Net framework和visual studio 三者的关系。其中.Net framwork 为程序
            开发框架，提供了很多安全的API函数其作用类似于JAVA虚拟机。visual studio是一个
@@ -237,7 +247,8 @@
      * 软件项目开发一般有几个重要的结构：DAL（数据访问层），BLL（业务逻辑层）和USL（表示层）
      * EFModel是Entity Framework中的一个类库项目，用于生成数据模型
      * visual studio各图标含义 https://msdn.microsoft.com/zh-cn/library/y47ychfe.aspx
-
+**** probleam and solution
+     * P:运行后浏览器无法运行该test网页 S：如果设置了代理服务器，记得取消本地地址的代理服务器
 	   
 * Todo with days
 ** DONE 完成《爱的觉醒》阅读
