@@ -183,9 +183,11 @@
 	        指令 git config --global http.proxy http://127.0.0.1:8088 (代理地址和端口）即可。
 	        这里容易出现的问题就是代理设置未成功，通过指令 git config --get --global http.proxy查看
 	        设置的代理。 http://www.tuicool.com/articles/2aYjAz7
-	       * git 分支 http://www.cnblogs.com/BeginMan/p/3543240.html
-	       * git push 当不同的用户push到同一个仓库时，同名文件会被覆盖，因此应该先clone再
-	         push
+	     * git 分支 http://www.cnblogs.com/BeginMan/p/3543240.html
+	     * git push 当不同的用户push到同一个仓库时，同名文件会被覆盖，因此应该先clone再
+	       push
+	     * 当输入指令 git pull 和git push后显示 already up-to-date 或者 everything up-to-date,两种
+	       情况说明远程库和本地库是完全一样的版本（commit产生版本）
                   
 *** C#
 **** ASP.NET MVC框架
