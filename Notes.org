@@ -182,10 +182,11 @@
 	        打开网络和共享中心-Internet选项-连接-局域网设置-高级，里面有代理服务器地址和端口；在使用
 	        指令 git config --global http.proxy http://127.0.0.1:8088 (代理地址和端口）即可。
 	        这里容易出现的问题就是代理设置未成功，通过指令 git config --get --global http.proxy查看
-	        设置的代理。 http://www.tuicool.com/articles/2aYjAz7
-	       * git 分支 http://www.cnblogs.com/BeginMan/p/3543240.html
-	       * git push 当不同的用户push到同一个仓库时，同名文件会被覆盖，因此应该先clone再
-	         push
+	        设置的代理。详情见 http://www.tuicool.com/articles/2aYjAz7
+	   * git 分支 详情见http://www.cnblogs.com/BeginMan/p/3543240.html
+	   * git push 当不同的用户push到同一个仓库时，同名文件会被覆盖，因此应该先clone再push
+	   * 当输入指令 git pull 和git push后显示 already up-to-date 或者 everything up-to-date,两种
+	       情况说明远程库和本地库是完全一样的版本（commit产生版本）
                   
 *** C#
 **** ASP.NET MVC框架
@@ -198,11 +199,16 @@
 
 	  * 通常情况下 controller的函数中返回view就可以正确显示页面，但这只能显示静态
 	    页面，要想显示动态页面必须在环节中融入model。三者的合理调用关系controller
-	    使用model提供的模板（通常是类）将数据保存到viewdata,接着controller调用view
-	    来显示HTML。
+	    使用model提供的模板（通常是类）将数据保存到Viewdata或者ViewBag,接着controller调用view
+	    来显示HTML，view需要的数据来自ViewData和ViewBag。
 
-	  * 其实可以将model的定义（类定义）直接放在controller中，但是为了能够使代码结构
-	    清晰，所以使用了MVC层次
+	  * ViewModel的出现是为了减少view中HTML中的呈现逻辑。另外其实可以将model的定义（类定义）直接放
+            在controller中，但是为了能够使代码结构清晰，所以使用了MVC层次。
+
+	  * 在cshtml文件中使用语句 @using xx-namespace (使用某个命名空间）
+	                         @model xx-model(使用该命名空间中的类）
+	    一般这种语句是连起来使用，可以用@Model指代引用的类
+
 	    
 **** 其它
           * C# , .Net framework和visual studio 三者的关系。其中.Net framwork 为程序
@@ -217,8 +223,7 @@
 	  * 不能在main函数里面定义类或者结构体
 	  * 一旦定义partial class则所有该类都必须包含关键字partial
 	  * 
-
-          
+        
 *** C++
     * public 本类，子类，本类对象都可以访问；
       protected 本类，子类，友元函数可以访问，本类对象不能访问；
@@ -239,6 +244,7 @@
     * 重载和const http://blog.sina.com.cn/s/blog_64053138010171rt.html
       重载的判断条件不包括返回值类型
 
+
 ** 项目管理
 *** 客户活动管理与资源开发
 **** process
@@ -250,6 +256,7 @@
 **** probleam and solution
      * P:运行后浏览器无法运行该test网页 S：如果设置了代理服务器，记得取消本地地址的代理服务器
 	   
+
 * Todo with days
 ** DONE 完成《爱的觉醒》阅读
    CLOSED: [2016-05-31 Tue 23:56] DEADLINE: <2016-05-31 Tue>
@@ -262,6 +269,17 @@
 
 ** TODO 完成《灵魂的黑夜》阅读
    DEADLINE: <2016-07-15 周五>
+** TODO 减肥5KG
+   DEADLINE: <2016-09-08 周四>
+   * 总体重从76KG减到71KG
+   * 记录表
+    | 日期 | 体重 | 腰围 | 胸围 |
+    |      |      |      |      |
+    |      |      |      |      |
+    |      |      |      |      |
+     
+
+
 * Footnotes
 
 [fn:example] just a example for footnotes
