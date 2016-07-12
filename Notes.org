@@ -77,6 +77,7 @@
        心理去调节的，只有等它自己转换，后来果然就变好了。很可能因此养成了该“问题解决”
        模式。
      * 事物的真谛往往只能由美得事物来展现？
+     * 在浪漫中最主要的因素便是一种浓重的、梦幻般的无意识
 **** obsessive love 读书笔记
 **** Thoughts of sexual preference 
      * closeted 的出现包括两方面的原因：外界的压力（客观）和内在对 straight pattern的认同（部分或者全部）（主观）
@@ -168,6 +169,12 @@
            * SQL 自学网 http://www.51zxw.net/list.aspx?cid=492
 	   * SQL server 2008 卸载过程中出现属性不匹配错误  解决方案 https://www.zhihu.com/question/34621524/answer/64718217
 	     重新安装过程中注意不要随意更改目录
+	   * SQL server 2008 安装中心，包括SQL server的安装以及其他组件（SQL server manager studio）等的安装；
+	     关于组件安装步骤 选择新的SQL独立安装或安装现有功能->选择执行新的SQL server2008安装->管理工具-基本
+	   * SQL server  manager studio 与SQL server注意版本要一致（2008对2008） 不然会出现连接问题
+	     SQL server只是一个服务器，它给我们提供管理数据库的一个服务，而SQL server manager studio只是使用这个服务器的工具
+	     也可以直接使用命令行来进行SQL Sever的操作
+
 
 *** GIT
            * git clone时遇见error setting certificate verify locations错误时，可以尝试
@@ -213,6 +220,11 @@
 	                         @model xx-model(使用该命名空间中的类）
 	    一般这种语句是连起来使用，可以用@Model指代引用的类
 
+          * visual studio tools（VS）中连接数据库的功能需要先安装SQL server manager studio（SSMS）
+
+	  * connectionString  中的Initial Catalog 值表示连接的数据库名称，当这个数据库是新数据库时，
+	    VS则会通过SSMS新建一个数据库，刷新后可见
+
 	    
 **** 其它
           * C# , .Net framework和visual studio 三者的关系。其中.Net framwork 为程序
@@ -248,7 +260,7 @@
     * 重载和const http://blog.sina.com.cn/s/blog_64053138010171rt.html
       重载的判断条件不包括返回值类型
 
-** 项目管理
+** PLICC
 *** 客户活动管理与资源开发
 **** process
      * 该项目属于ASP.NET MVC框架，先学习MVC框架
@@ -259,6 +271,7 @@
 **** probleam and solution
      * P:运行后浏览器无法运行该test网页 S：如果设置了代理服务器，记得取消本地地址的代理服务器
 	   
+*** visual studio 报表
 
 * Todo with days
 ** DONE 完成《爱的觉醒》阅读
