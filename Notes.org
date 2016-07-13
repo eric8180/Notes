@@ -176,8 +176,7 @@
 	   * SQL server  manager studio 与SQL server注意版本要一致（2008对2008） 不然会出现连接问题
 	     SQL server只是一个服务器，它给我们提供管理数据库的一个服务，而SQL server manager studio只是使用这个服务器的工具
 	     也可以直接使用命令行来进行SQL Sever的操作
-	   * 远程数据库保存到本地方法 http://bbs.51cto.com/thread-1010418-1.html
-
+	   * 远程数据库保存到本地方法 源：生成脚本文件   目：导入脚本（执行脚本）
 
 *** GIT
            * git clone时遇见error setting certificate verify locations错误时，可以尝试
