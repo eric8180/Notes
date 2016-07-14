@@ -224,8 +224,12 @@
 
           * visual studio tools（VS）中连接数据库的功能需要先安装SQL server manager studio（SSMS）
 
-	  * connectionString  中的Initial Catalog 值表示连接的数据库名称，当这个数据库是新数据库时，
-	    VS则会通过SSMS新建一个数据库，刷新后可见
+	  * <connectionStrings>包含了连接数据库的一切信息
+	     eg:<add name="hnkpi" connectionString="data source=10.104.17.149;initial catalog=hnkpi
+             ;persist security info=True;user id=sa;password=daisyhzh666;MultipleActiveResultSets=True;
+             App=EntityFramework" providerName="System.Data.SqlClient"/>
+	    前提是安装了SQL server managerment 这样VS会自动为我们打开该数据库
+
 ***** HTML
           * <input>中的id 和name 作用不太相同，id的作用是在<script>中的标示给本HTML使用，name的作用
             是传递数据给cotroller使用，name也可以传给<script>
