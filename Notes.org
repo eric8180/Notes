@@ -230,6 +230,18 @@
              App=EntityFramework" providerName="System.Data.SqlClient"/>
 	    前提是安装了SQL server managerment 这样VS会自动为我们打开该数据库
 
+	  * <input name="" value="">中的信息传到控制器时name表示变量名，value表示该变量的值
+
+	  * RedirectToAction("xx") 其中xx表示控制器的函数
+
+	  * migration 学习网址 https://msdn.microsoft.com/en-us/data/jj591621.aspx
+
+	  * 怎么判断是codefirst 使用了system.data.entity.dbcontext与system.data.entity.dbset,没有
+	    可视化文件，就是code first http://blog.csdn.net/dj2008/article/details/23756895
+
+	  * 一个solution里面有多个project，project所在文件夹名字不能随意更改，不然加载solution后不能
+	    正确加载project
+
 ***** HTML
           * <input>中的id 和name 作用不太相同，id的作用是在<script>中的标示给本HTML使用，name的作用
             是传递数据给cotroller使用，name也可以传给<script>
@@ -307,6 +319,7 @@
     |           |        |      |      |
      
 
+** TODO 寄源件给华为
 
 * Footnotes
 
