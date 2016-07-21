@@ -84,6 +84,9 @@
 **** Thoughts of sexual preference 
      * closeted 的出现包括两方面的原因：外界的压力（客观）和内在对 straight pattern的认同（部分或者全部）（主观）
        要彻底的coming out 是否需要颠覆或者改变family line 这种观点
+**** 心灵的年轮
+     * 退行现象，指一个人遇到重大创伤时幻想,缅怀旧日的美好 103
+     * 
 ** reserve
 *** concept
             * EPOC (excess post - exercise oxygen consumption)
@@ -274,7 +277,7 @@
 	  * @ 取消转义字符的意思
 	  * 不能在main函数里面定义类或者结构体
 	  * 一旦定义partial class则所有该类都必须包含关键字partial
-	  * 
+	  * 正则表达式中的{n}表示上一个集合（字符）有n个,一个小括号里面是一个集合
         
 *** C++
     * public 本类，子类，本类对象都可以访问；
