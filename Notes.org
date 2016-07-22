@@ -258,6 +258,10 @@
 
 	  * 利用oledb取到excel的数据后 第一行自动变为列名称并不计入行统计中（datatable.Rows.count）
 
+	  * [ValidateAntiForgeryToken]要和[HttpPost]一起使用才有效
+
+	  * 在控制器中返回视图文件时，假如该视图文件不在控制器同名目录，则要加上后缀（.cshtml）；同目录不用加。
+
 
 ***** HTML
           * <input>中的id 和name 作用不太相同，id的作用是在<script>中的标示给本HTML使用，name的作用
